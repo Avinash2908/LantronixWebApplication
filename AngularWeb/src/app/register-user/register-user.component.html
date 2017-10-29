@@ -1,0 +1,27 @@
+<!-- 
+    Sign up form.
+Form validations implemented
+Input cell color indication differences for valid and invalid scenarios
+ -->
+<section>
+    <div class="sectionDiv">
+        <h1>Sign Up</h1>
+        <form #userForm="ngForm" class="content">
+            <input type="text" class="inline-input left" placeholder="First Name" [(ngModel)]="user.firstname" name="firstname" #firstname="ngModel" required><input class="inline-input right" placeholder="Last Name" [(ngModel)]="user.lastname" name="lastname" required>
+            <input type="text" class="line-input form-control" placeholder="Enter Username" [(ngModel)]="user.username" name="username" required>
+            <input type="password" class="line-input form-control" placeholder="Password" [(ngModel)]="user.password" name="password" required>
+            <input type="email" class="line-input form-control" placeholder="Email Address" [(ngModel)]="user.email" name="email" required email>
+            <input type="text" class="line-input form-control" placeholder="Policy License Key" [(ngModel)]="user.policy" name="policy" required>
+            <button type="submit" class="btn btn-default submitBtn" [disabled]="!userForm.form.valid" (click)="createUser()">Create an Account</button>
+            <p>
+                By clicking Create Account, you agree to our Terms of services & Policies
+            </p>
+
+            <br>
+            <div><span style="color:red">{{errorMessage}}</span></div>
+            <br>
+
+        </form>
+    </div>
+
+</section>

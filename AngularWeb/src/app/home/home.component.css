@@ -1,0 +1,21 @@
+
+.sectionDiv {
+    margin: 10% 5% 0 5%;
+    width: 50%;
+    color: white;
+}
+
+.sectionDiv span {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #01A8EB;
+    color: white;
+    width: 150px;
+    height: 40px;
+    margin: 20px 10px;
+    font-size: 10px;
+    font-weight: bold;
+}

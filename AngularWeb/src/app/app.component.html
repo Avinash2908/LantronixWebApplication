@@ -1,0 +1,25 @@
+
+
+<!-- For higher resolution screens -->
+<header *ngIf="innerWidth>600" class="header">
+  <span class="headerSpan">altron</span>
+  <div class="headerCnt">
+    <b [routerLink]="['/home']">ABOUT</b>
+    <b>LOGIN</b>
+    <b [routerLink]="['/signup']">SIGN UP</b>
+  </div>
+</header>
+
+<!-- For lower resolution screens -->
+<header *ngIf="innerWidth<=600">
+  <span class="headerSpan">altron</span>
+  <span style="font-size:30px;cursor:pointer;float:right;margin-right:30px;" (click)="enableNav=true;">&#9776;</span>
+  <div *ngIf="enableNav" id="mySidenav" class="sidenav">
+    <a class="closebtn" (click)="enableNav=false;">&times;</a>
+    <b [routerLink]="['/home']">ABOUT</b>
+    <b href="#">LOGIN</b>
+    <b [routerLink]="['/signup']">SIGN UP</b>
+  </div>
+</header>
+
+<router-outlet></router-outlet>

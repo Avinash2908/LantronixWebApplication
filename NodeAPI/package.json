@@ -1,0 +1,11 @@
+{
+    "name": "RegistrationAPI",
+    "version": "1.0.0",
+    "main": "server.js",
+    "description": "API for Signing up to the application",
+    "author": "Avinash",
+    "dependencies": {
+        "express": "^4.16.2",
+        "mongoose": "^4.12.4"
+    }
+}
